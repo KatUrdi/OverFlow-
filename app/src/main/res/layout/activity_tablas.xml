@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".MainActivity">
+    tools:context=".Tablas_activity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,15 +27,6 @@
             android:layout_margin="20dp"
             android:layout_weight="1"
             android:background="@drawable/contenedor"/>
-
-        <View
-            android:id="@+id/view_3"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_margin="20dp"
-            android:layout_weight="1"
-            android:background="@drawable/contenedor"/>
-
     </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -106,7 +97,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="55dp"
-            android:text="@string/balnce"
+            android:text="@string/tablas"
             android:textColor="#ffffff"
             android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="@id/guideline1"
@@ -120,7 +111,7 @@
             android:text="@string/tablas"
             android:textColor="#ffffff"
             android:textSize="16sp"
-            android:backgroundTint="#9759EF"
+            android:backgroundTint="#F16E1E"
             app:layout_constraintBottom_toBottomOf="@id/guideline1"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@id/button_gastos"/>
@@ -143,7 +134,7 @@
             android:layout_height="wrap_content"
             android:layout_marginVertical="35dp"
             android:layout_marginHorizontal="30dp"
-            android:text="@string/general"
+            android:text="@string/gastos_mensuales"
             android:textColor="#000000"
             android:textSize="20sp"
             app:layout_constraintTop_toBottomOf="@id/guideline1"
@@ -156,7 +147,7 @@
             android:layout_marginVertical="100dp"
             android:layout_marginHorizontal="80dp"
             android:text="@string/ingresos"
-            android:textColor="#000000"
+            android:textColor="#5BA85B"
             android:textSize="20sp"
             app:layout_constraintTop_toBottomOf="@id/guideline1"
             app:layout_constraintLeft_toLeftOf="parent"/>
@@ -168,38 +159,11 @@
             android:layout_marginVertical="70dp"
             android:layout_marginHorizontal="80dp"
             android:text="@string/gastos_minusculas"
-            android:textColor="#000000"
+            android:textColor="#FD0000"
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@id/guideline2"
             app:layout_constraintLeft_toLeftOf="parent"/>
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginHorizontal="50dp"
-            app:cardCornerRadius="50dp"
-            app:layout_constraintBottom_toBottomOf="@id/textView_gastos"
-            app:layout_constraintTop_toTopOf="@id/textView_gastos"
-            app:layout_constraintLeft_toLeftOf="parent">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/puntorojo" />
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginHorizontal="50dp"
-            app:cardCornerRadius="50dp"
-            app:layout_constraintBottom_toBottomOf="@id/textView_ingresos"
-            app:layout_constraintTop_toTopOf="@id/textView_ingresos"
-            app:layout_constraintLeft_toLeftOf="parent">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/puntoverde" />
-        </androidx.cardview.widget.CardView>
         <TextView
             android:id="@+id/textView_cantida_de_ingresos"
             android:layout_width="wrap_content"
@@ -224,113 +188,8 @@
             app:layout_constraintBottom_toTopOf="@id/guideline2"
             app:layout_constraintRight_toRightOf="parent"/>
 
-        <TextView
-            android:id="@+id/textView_gastos_por_categoria"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="35dp"
-            android:layout_marginHorizontal="30dp"
-            android:text="@string/gastos_por_categoria"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            app:layout_constraintTop_toBottomOf="@id/guideline2"
-            app:layout_constraintLeft_toLeftOf="parent"/>
-
-        <TextView
-            android:id="@+id/textView_comida"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="70dp"
-            android:text="@string/comida"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            app:layout_constraintTop_toBottomOf="@id/guideline2"
-            app:layout_constraintLeft_toLeftOf="@id/guideline"/>
-        <androidx.cardview.widget.CardView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            app:cardCornerRadius="50dp"
-            android:layout_marginHorizontal="10dp"
-            app:layout_constraintBottom_toBottomOf="@id/textView_comida"
-            app:layout_constraintTop_toTopOf="@id/textView_comida"
-            app:layout_constraintRight_toRightOf="@id/guideline">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/comida" />
-        </androidx.cardview.widget.CardView>
-
-        <TextView
-            android:id="@+id/textView_ropa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
-            android:text="@string/ropa"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            app:layout_constraintTop_toBottomOf="@id/textView_comida"
-            app:layout_constraintLeft_toLeftOf="@id/guideline"/>
-        <androidx.cardview.widget.CardView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            app:cardCornerRadius="50dp"
-            android:layout_marginHorizontal="10dp"
-            app:layout_constraintBottom_toBottomOf="@id/textView_ropa"
-            app:layout_constraintTop_toTopOf="@id/textView_ropa"
-            app:layout_constraintRight_toRightOf="@id/guideline">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/ropa" />
-        </androidx.cardview.widget.CardView>
-
-        <TextView
-            android:id="@+id/textView_alquiler"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
-            android:text="@string/alquiler"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            app:layout_constraintTop_toBottomOf="@id/textView_ropa"
-            app:layout_constraintLeft_toLeftOf="@id/guideline"/>
-        <androidx.cardview.widget.CardView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            app:cardCornerRadius="50dp"
-            android:layout_marginHorizontal="10dp"
-            app:layout_constraintBottom_toBottomOf="@id/textView_alquiler"
-            app:layout_constraintTop_toTopOf="@id/textView_alquiler"
-            app:layout_constraintRight_toRightOf="@id/guideline">
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/alquiler" />
-        </androidx.cardview.widget.CardView>
-        <TextView
-            android:id="@+id/textView_otros"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
-            android:text="@string/otros"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            app:layout_constraintTop_toBottomOf="@id/textView_alquiler"
-            app:layout_constraintLeft_toLeftOf="@id/guideline"/>
-        <androidx.cardview.widget.CardView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            app:cardCornerRadius="50dp"
-            android:layout_marginHorizontal="10dp"
-            app:layout_constraintBottom_toBottomOf="@id/textView_otros"
-            app:layout_constraintTop_toTopOf="@id/textView_otros"
-            app:layout_constraintRight_toRightOf="@id/guideline">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/otros" />
-        </androidx.cardview.widget.CardView>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

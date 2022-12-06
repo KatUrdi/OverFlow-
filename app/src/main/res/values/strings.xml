@@ -8,8 +8,9 @@
     <string name="ingresos"><b>Ingresos</b></string>
     <string name="gastos_minusculas"><b>Gastos</b></string>
     <string name="gastos_por_categoria"><b>Gastos Por Categoria</b></string>
-    <string name="comida">comida</string>
-    <string name="ropa">ropa</string>
-    <string name="alquiler">alquiler</string>
-    <string name="otros">otros</string>
+    <string name="comida"><b>comida</b></string>
+    <string name="ropa"><b>ropa</b></string>
+    <string name="alquiler"><b>alquiler</b></string>
+    <string name="otros"><b>otros</b></string>
+    <string name="gastos_mensuales"><b>Gastos Mensuales</b></string>
 </resources>
