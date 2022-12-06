@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">OverFlow</string>
-    <string name="moneyfy">MoneyFy</string>
+    <string name="moneyfy"><b>MoneyFy</b></string>
+    <string name="balnce">Balnce</string>
+    <string name="tablas"><b>Tablas</b></string>
+    <string name="gastos"><b>Gastos</b></string>
+    <string name="general"><b>General</b></string>
+    <string name="ingresos"><b>Ingresos</b></string>
+    <string name="gastos_minusculas"><b>Gastos</b></string>
+    <string name="gastos_por_categoria"><b>Gastos Por Categoria</b></string>
+    <string name="comida">comida</string>
+    <string name="ropa">ropa</string>
+    <string name="alquiler">alquiler</string>
+    <string name="otros">otros</string>
 </resources>
