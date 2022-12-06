@@ -26,7 +26,7 @@
             android:layout_height="0dp"
             android:layout_margin="20dp"
             android:layout_weight="1"
-            android:background="#ECCACA" />
+            android:background="@drawable/contenedor"/>
 
         <View
             android:id="@+id/view_3"
@@ -34,7 +34,7 @@
             android:layout_height="0dp"
             android:layout_margin="20dp"
             android:layout_weight="1"
-            android:background="#E1D2D2" />
+            android:background="@drawable/contenedor"/>
 
     </LinearLayout>
 
