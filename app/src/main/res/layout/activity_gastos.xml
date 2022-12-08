@@ -23,12 +23,6 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.65" />
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_mitad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5"/>
-    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -87,7 +81,7 @@
 
     <Button
         android:id="@+id/button_tablas"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:backgroundTint="#9759EF"
         android:text="@string/tablas"
@@ -99,7 +93,7 @@
 
     <Button
         android:id="@+id/button_gastos"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:backgroundTint="#F16E1E"
         android:text="@string/gastos"

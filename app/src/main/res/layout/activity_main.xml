@@ -49,12 +49,6 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.65" />
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline_mitad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.5"/>
-        <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -119,7 +113,7 @@
             app:layout_constraintRight_toRightOf="parent"/>
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/button_tablas"
             android:text="@string/tablas"
@@ -128,10 +122,10 @@
             android:backgroundTint="#9759EF"
             app:layout_constraintBottom_toBottomOf="@id/guideline1"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="@id/guideline_mitad"/>
+            app:layout_constraintRight_toLeftOf="@id/button_gastos" />
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/button_gastos"
             android:text="@string/gastos"
@@ -139,7 +133,7 @@
             android:textSize="16sp"
             android:backgroundTint="#9759EF"
             app:layout_constraintBottom_toBottomOf="@id/guideline1"
-            app:layout_constraintLeft_toRightOf="@id/guideline_mitad"
+            app:layout_constraintLeft_toRightOf="@id/button_tablas"
             app:layout_constraintRight_toRightOf="parent"/>
 
         <TextView
