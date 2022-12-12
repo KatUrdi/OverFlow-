@@ -13,4 +13,13 @@
     <string name="alquiler"><b>alquiler</b></string>
     <string name="otros"><b>otros</b></string>
     <string name="gastos_mensuales"><b>Gastos Mensuales</b></string>
+    <string name="Aceptar"><b>Aceptar</b></string>
+    <string name="Ingreso"><b>Ingreso</b></string>
+    <string name="Gasto"><b>Gasto</b></string>
+    <string name="signup"><b>signup</b></string>
+    <string name="continuar"><b>continuar</b></string>
+    <string name="login"><b>login</b></string>
+    <string name="Password"><b>Password</b></string>
+    <string name="Correo"><b>Correo</b></string>
+
 </resources>
