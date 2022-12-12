@@ -13,4 +13,5 @@
     <string name="alquiler"><b>alquiler</b></string>
     <string name="otros"><b>otros</b></string>
     <string name="gastos_mensuales"><b>Gastos Mensuales</b></string>
+    <string name="dolar">$</string>
 </resources>
