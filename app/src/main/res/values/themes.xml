@@ -2,9 +2,9 @@
     <!-- Base application theme. -->
     <style name="Theme.OverFlow" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#2F195F</item>
-        <item name="colorPrimaryVariant">#F54D27</item>
-        <item name="colorOnPrimary">#9759EF</item>
+        <item name="colorPrimary">#9759EF</item>
+        <item name="colorPrimaryVariant">#2F195F</item>
+        <item name="colorOnPrimary">#F54D27</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">#FFFFFF</item>
         <item name="colorSecondaryVariant">#E2E8CE</item>
