@@ -22,4 +22,5 @@
     <string name="Password"><b>Password</b></string>
     <string name="Correo"><b>Correo</b></string>
 
+    <string name="dolar">$</string>
 </resources>
