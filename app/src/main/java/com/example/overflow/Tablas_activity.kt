@@ -22,6 +22,7 @@ class Tablas_activity : AppCompatActivity() {
         }
 
         // progress bar
-
+        binding.progressHorizontal.max = 100
+        binding.progressHorizontal.progress = 50
     }
 }
