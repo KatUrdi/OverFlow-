@@ -5,9 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.overflow.databinding.ActivityMainBinding
 
-private lateinit var binding: ActivityMainBinding
-
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -25,6 +26,9 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, Gastos_activity::class.java)
             startActivity(intent)
         }
+
+        // grafica pai
+
     }
 
 }
