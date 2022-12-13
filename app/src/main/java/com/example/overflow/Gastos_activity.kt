@@ -5,10 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.overflow.databinding.ActivityGastosBinding
 
-
-private lateinit var binding: ActivityGastosBinding
-
 class Gastos_activity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityGastosBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
