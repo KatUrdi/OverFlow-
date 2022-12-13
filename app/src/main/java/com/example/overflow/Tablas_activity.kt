@@ -20,5 +20,8 @@ class Tablas_activity : AppCompatActivity() {
             val intent = Intent(this, Gastos_activity::class.java)
             startActivity(intent)
         }
+
+        // progress bar
+
     }
 }
