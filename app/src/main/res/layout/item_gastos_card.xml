@@ -20,6 +20,33 @@
                 android:layout_height="match_parent"
                 android:background="@color/white"/>
 
+            <ImageView
+                android:id="@+id/image_set_comida"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginHorizontal="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/icono_food"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/image_view_comida"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="10dp"
+                app:cardCornerRadius="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/comida" />
+            </androidx.cardview.widget.CardView>
+
+
             <TextView
                 android:id="@+id/text_view_fecha"
                 android:layout_width="wrap_content"
@@ -28,7 +55,7 @@
                 android:text="Viernes, 15 mayo"
                 android:layout_marginBottom="4dp"
                 android:layout_marginHorizontal="16dp"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/image_view_comida"
                 app:layout_constraintBottom_toTopOf="@+id/text_view_name"
                 android:textColor="@color/black"/>
 
@@ -40,7 +67,7 @@
                 android:text="comida"
                 android:layout_marginBottom="12dp"
                 android:layout_marginHorizontal="16dp"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/image_view_comida"
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:textColor="@color/black"/>
 
@@ -52,6 +79,7 @@
                 android:layout_marginBottom="4dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 android:textSize="20sp"
                 android:text="6"
                 android:textColor="@color/black"/>
