@@ -6,9 +6,9 @@ import android.os.Bundle
 import com.example.overflow.databinding.ActivityMainBinding
 import com.example.overflow.databinding.ActivityTablasBinding
 
-private lateinit var binding: ActivityTablasBinding
-
 class Tablas_activity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityTablasBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
