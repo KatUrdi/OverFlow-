@@ -16,11 +16,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var ingresoFAB: FloatingActionButton
     lateinit var compraFAB: FloatingActionButton
     var fabVisible = false
-/*
-    fun drawPai(view: View){
-        val arrayList = ArrayList<Int>()
-    }
-*/
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -28,13 +24,13 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(view)
 
-        // cambiar a la cativity tablas
+        // switch to the activity "tablas"
         binding.buttonTablas.setOnClickListener {
             val intent = Intent(this, Tablas_activity::class.java)
             startActivity(intent)
         }
 
-        // cambiar a la cativity gastos
+        // switch to the activity "gastos"
         binding.buttonGastos.setOnClickListener {
             val intent = Intent(this, Gastos_activity::class.java)
             startActivity(intent)
@@ -100,17 +96,35 @@ class MainActivity : AppCompatActivity() {
         // click listener for our home fab
         binding.ingresoFab.setOnClickListener {
             // on below line we are displaying a toast message.
-                val intent = Intent(this, Ingreso_activity::class.java)
-                startActivity(intent)
-            }
+            val intent = Intent(this, Ingreso_activity::class.java)
+            startActivity(intent)
+        }
 
         // on below line we are adding on
         // click listener for settings fab
         binding.compraFab.setOnClickListener {
-        // on below line we are displaying a toast message.
-                val intent = Intent(this, Compra_activity::class.java)
-                startActivity(intent)
-    }
+            // on below line we are displaying a toast message.
+            val intent = Intent(this, Compra_activity::class.java)
+            startActivity(intent)
+        }
+
+        // progress bar "comida"
+        binding.progressComida.max = 100
+        binding.progressComida.progress = 68
+
+
+        // progress bar "ropa"
+        binding.progressRopa.max = 100
+        binding.progressRopa.progress = 68
+
+
+        // progress bar "alquiler"
+        binding.progressAlquiler.max = 100
+        binding.progressAlquiler.progress = 68
+
+        // progress bar "otros"
+        binding.progressOtros.max = 100
+        binding.progressOtros.progress = 68
     }
 
 }

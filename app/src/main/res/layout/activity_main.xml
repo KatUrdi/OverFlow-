@@ -252,7 +252,16 @@
         app:layout_constraintBottom_toBottomOf="@id/textView_comida"
         app:layout_constraintRight_toRightOf="@id/guideline"
         app:layout_constraintTop_toTopOf="@id/textView_comida" />
-
+    <ProgressBar
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress_comida"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:background="#FF8244"
+        android:layout_marginStart="40dp"
+        app:layout_constraintTop_toTopOf="@+id/textView_comida"
+        app:layout_constraintRight_toRightOf="@id/guideline_medio"
+        app:layout_constraintLeft_toLeftOf="parent"/>
     <TextView
         android:id="@+id/textView_ropa"
         android:layout_width="wrap_content"
@@ -272,7 +281,16 @@
         app:layout_constraintBottom_toBottomOf="@id/textView_ropa"
         app:layout_constraintRight_toRightOf="@id/guideline"
         app:layout_constraintTop_toTopOf="@id/textView_ropa" />
-
+    <ProgressBar
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress_ropa"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:background="#B33BC8"
+        android:layout_marginStart="40dp"
+        app:layout_constraintTop_toTopOf="@+id/textView_ropa"
+        app:layout_constraintRight_toRightOf="@id/guideline_medio"
+        app:layout_constraintLeft_toLeftOf="parent"/>
 
     <TextView
         android:id="@+id/textView_alquiler"
@@ -293,6 +311,16 @@
         app:layout_constraintBottom_toBottomOf="@id/textView_alquiler"
         app:layout_constraintRight_toRightOf="@id/guideline"
         app:layout_constraintTop_toTopOf="@id/textView_alquiler" />
+    <ProgressBar
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress_alquiler"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:background="#5BFAA7"
+        android:layout_marginStart="40dp"
+        app:layout_constraintTop_toTopOf="@+id/textView_alquiler"
+        app:layout_constraintRight_toRightOf="@id/guideline_medio"
+        app:layout_constraintLeft_toLeftOf="parent"/>
 
     <TextView
         android:id="@+id/textView_otros"
@@ -313,6 +341,16 @@
         app:layout_constraintBottom_toBottomOf="@id/textView_otros"
         app:layout_constraintRight_toRightOf="@id/guideline"
         app:layout_constraintTop_toTopOf="@id/textView_otros" />
+    <ProgressBar
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress_otros"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:background="#2072ED"
+        android:layout_marginStart="40dp"
+        app:layout_constraintTop_toTopOf="@+id/textView_otros"
+        app:layout_constraintRight_toRightOf="@id/guideline_medio"
+        app:layout_constraintLeft_toLeftOf="parent"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/Add_fab"
