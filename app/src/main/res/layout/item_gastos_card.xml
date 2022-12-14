@@ -28,7 +28,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:src="@drawable/icono_food"
+                android:src="@drawable/icono_painting"
                 android:background="@drawable/color_comida"/>
             <TextView
                 android:id="@+id/text_view_fecha"
