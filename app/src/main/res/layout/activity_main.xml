@@ -15,6 +15,13 @@
         app:layout_constraintGuide_percent="0.5" />
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.88" />
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -52,7 +59,7 @@
         android:layout_weight="1"
         android:background="@drawable/contenedor"
         app:layout_constraintBottom_toBottomOf="@id/guideline2"
-        app:layout_constraintTop_toTopOf="@id/guideline1"/>
+        app:layout_constraintTop_toTopOf="@id/guideline1" />
 
     <View
         android:id="@+id/view_3"
@@ -62,7 +69,7 @@
         android:layout_weight="1"
         android:background="@drawable/contenedor"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="@id/guideline2"/>
+        app:layout_constraintTop_toTopOf="@id/guideline2" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="50dp"
@@ -342,4 +349,65 @@
             android:src="@drawable/otros" />
     </androidx.cardview.widget.CardView>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/Add_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_baseline_add_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/purple_500"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/compra_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_baseline_add_24"
+        app:fabSize="mini"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/Add_fab"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/purple_500"/>
+
+    <TextView
+        android:id="@+id/compra_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="compra"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/compra_fab"
+        app:layout_constraintEnd_toStartOf="@id/compra_fab"
+        app:layout_constraintTop_toTopOf="@id/compra_fab" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/ingreso_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_baseline_add_24"
+        app:fabSize="mini"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/compra_fab"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/purple_500"/>
+
+    <TextView
+        android:id="@+id/ingreso_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/Ingreso"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/ingreso_fab"
+        app:layout_constraintEnd_toStartOf="@id/ingreso_fab"
+        app:layout_constraintTop_toTopOf="@id/ingreso_fab" />
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
