@@ -34,7 +34,13 @@ class PresentationCardAdapter :
 
     inner class PresentationCardViewHolder(private val binding: ItemGastosCardBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun binding(data: String) {/*
+        fun binding(data: String) {
+            binding.textViewFecha.text = data
+            binding.textCosto.text=data
+            when (itemId){
+
+            }
+        /*
             binding.textViewName.text = data
             binding.imageProfile.setImageResource(R.drawable.vamoacalmarno)
             binding.textViewHobie.text = context?.getText(R.string.hobie)*/
