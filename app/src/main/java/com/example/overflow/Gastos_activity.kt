@@ -18,7 +18,7 @@ class Gastos_activity : AppCompatActivity() {
         binding.buttonTablas.setOnClickListener {
             val intent = Intent(this, Tablas_activity::class.java)
             startActivity(intent)
-
         }
+
     }
 }
