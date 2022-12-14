@@ -289,7 +289,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginHorizontal="10dp"
-        android:src="@drawable/color_ropa"
+        android:src="@drawable/color_alquiler"
         app:layout_constraintBottom_toBottomOf="@id/textView_alquiler"
         app:layout_constraintRight_toRightOf="@id/guideline"
         app:layout_constraintTop_toTopOf="@id/textView_alquiler" />
@@ -305,42 +305,36 @@
         app:layout_constraintLeft_toLeftOf="@id/guideline"
         app:layout_constraintTop_toBottomOf="@id/textView_alquiler" />
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginHorizontal="10dp"
-        app:cardCornerRadius="50dp"
+        android:src="@drawable/color_otros"
         app:layout_constraintBottom_toBottomOf="@id/textView_otros"
         app:layout_constraintRight_toRightOf="@id/guideline"
-        app:layout_constraintTop_toTopOf="@id/textView_otros">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/otros" />
-    </androidx.cardview.widget.CardView>
+        app:layout_constraintTop_toTopOf="@id/textView_otros" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/Add_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
+        android:backgroundTint="@color/purple_500"
         android:src="@drawable/ic_baseline_add_24"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:backgroundTint="@color/purple_500"/>
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/compra_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
+        android:backgroundTint="@color/purple_500"
         android:src="@drawable/ic_baseline_add_24"
-        app:fabSize="mini"
         android:visibility="gone"
+        app:fabSize="mini"
         app:layout_constraintBottom_toTopOf="@+id/Add_fab"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:backgroundTint="@color/purple_500"/>
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/compra_text"
@@ -358,12 +352,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
+        android:backgroundTint="@color/purple_500"
         android:src="@drawable/ic_baseline_add_24"
-        app:fabSize="mini"
         android:visibility="gone"
+        app:fabSize="mini"
         app:layout_constraintBottom_toTopOf="@id/compra_fab"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:backgroundTint="@color/purple_500"/>
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/ingreso_text"
@@ -375,8 +369,6 @@
         app:layout_constraintBottom_toBottomOf="@id/ingreso_fab"
         app:layout_constraintEnd_toStartOf="@id/ingreso_fab"
         app:layout_constraintTop_toTopOf="@id/ingreso_fab" />
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
