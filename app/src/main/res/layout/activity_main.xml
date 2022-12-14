@@ -245,8 +245,8 @@
         app:layout_constraintTop_toBottomOf="@id/guideline2" />
 
     <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_marginHorizontal="10dp"
         android:src="@drawable/color_comida"
         app:layout_constraintBottom_toBottomOf="@id/textView_comida"
@@ -265,8 +265,8 @@
         app:layout_constraintTop_toBottomOf="@id/textView_comida" />
 
     <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_marginHorizontal="10dp"
         android:src="@drawable/color_ropa"
         app:layout_constraintBottom_toBottomOf="@id/textView_ropa"
@@ -286,8 +286,8 @@
         app:layout_constraintTop_toBottomOf="@id/textView_ropa" />
 
     <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_marginHorizontal="10dp"
         android:src="@drawable/color_alquiler"
         app:layout_constraintBottom_toBottomOf="@id/textView_alquiler"
@@ -306,8 +306,8 @@
         app:layout_constraintTop_toBottomOf="@id/textView_alquiler" />
 
     <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_marginHorizontal="10dp"
         android:src="@drawable/color_otros"
         app:layout_constraintBottom_toBottomOf="@id/textView_otros"
