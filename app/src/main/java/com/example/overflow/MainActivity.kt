@@ -10,11 +10,7 @@ import com.example.overflow.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-/*
-    fun drawPai(view: View){
-        val arrayList = ArrayList<Int>()
-    }
-*/
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -33,7 +29,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // grafica pai
 
 
     }
