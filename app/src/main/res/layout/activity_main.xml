@@ -15,6 +15,13 @@
         app:layout_constraintGuide_percent="0.5" />
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.88" />
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -278,20 +285,14 @@
         app:layout_constraintLeft_toLeftOf="@id/guideline"
         app:layout_constraintTop_toBottomOf="@id/textView_ropa" />
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginHorizontal="10dp"
-        app:cardCornerRadius="50dp"
+        android:src="@drawable/color_ropa"
         app:layout_constraintBottom_toBottomOf="@id/textView_alquiler"
         app:layout_constraintRight_toRightOf="@id/guideline"
-        app:layout_constraintTop_toTopOf="@id/textView_alquiler">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/alquiler" />
-    </androidx.cardview.widget.CardView>
+        app:layout_constraintTop_toTopOf="@id/textView_alquiler" />
 
     <TextView
         android:id="@+id/textView_otros"
@@ -319,4 +320,65 @@
             android:src="@drawable/otros" />
     </androidx.cardview.widget.CardView>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/Add_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_baseline_add_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/purple_500"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/compra_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_baseline_add_24"
+        app:fabSize="mini"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/Add_fab"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/purple_500"/>
+
+    <TextView
+        android:id="@+id/compra_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="compra"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/compra_fab"
+        app:layout_constraintEnd_toStartOf="@id/compra_fab"
+        app:layout_constraintTop_toTopOf="@id/compra_fab" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/ingreso_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_baseline_add_24"
+        app:fabSize="mini"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/compra_fab"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/purple_500"/>
+
+    <TextView
+        android:id="@+id/ingreso_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/Ingreso"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/ingreso_fab"
+        app:layout_constraintEnd_toStartOf="@id/ingreso_fab"
+        app:layout_constraintTop_toTopOf="@id/ingreso_fab" />
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+

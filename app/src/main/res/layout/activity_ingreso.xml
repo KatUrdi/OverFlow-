@@ -108,10 +108,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
+            android:textColorHint="@color/purple_500"
             android:hint="@string/fecha"
             android:inputType="date"
             android:maxLength="15"
-            app:layout_constraintTop_toBottomOf="@+id/text_title" />
+            app:layout_constraintTop_toBottomOf="@+id/text_title"
+            android:textColor="@color/purple_500"
+            android:backgroundTint="@color/purple_500"/>
 
         <EditText
             android:id="@+id/monto_ingreso"
@@ -119,9 +122,11 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:hint="MONTO"
+            android:textColorHint="@color/purple_500"
             android:inputType="number"
             android:maxLength="15"
             app:layout_constraintTop_toBottomOf="@+id/fecha_ingreso"
+            android:backgroundTint="@color/purple_500"
             />
 
 

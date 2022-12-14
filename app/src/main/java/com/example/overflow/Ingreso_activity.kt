@@ -23,7 +23,6 @@ class Ingreso_activity : AppCompatActivity() {
 
         }
     }
-
     fun managePopup() {
         bindingPopup = ActivityIngresoBinding.inflate(layoutInflater)
         val dialog = Dialog(this)
@@ -38,4 +37,8 @@ class Ingreso_activity : AppCompatActivity() {
             dialog.dismiss()
         }
     }
+
+
+
 }
+
