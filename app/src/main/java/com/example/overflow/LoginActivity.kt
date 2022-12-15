@@ -31,6 +31,11 @@ class LoginActivity : AppCompatActivity() {
                 if (validateData(email, password))
                     loginUser(email, password)
             }
+            /*
+            buttonSignup.setOnClickListener {
+                val intent = Intent(this, singup_activity)
+                startActivity(intent)
+            }*/
             /*buttonSignup.setOnClickListener {
                 val email = emailEdit.text.toString()
                 val password = passwordEdit.text.toString()

@@ -23,5 +23,6 @@
     <string name="Password"><b>Password</b></string>
     <string name="Correo"><b>Correo</b></string>
     <string name="gastos">Gastos</string>
+    <string name="welcome_back">Welcome Back</string>
 
 </resources>
