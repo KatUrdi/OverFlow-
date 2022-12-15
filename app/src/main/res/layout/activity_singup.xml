@@ -74,38 +74,13 @@
         app:layout_constraintTop_toBottomOf="@+id/password_title" />
 
     <Button
-        android:id="@+id/button_login"
+        android:id="@+id/button_signup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/basic_margin"
-        android:text="@string/login"
+        android:text="@string/signup"
         android:backgroundTint="@color/orange"
         app:layout_constraintTop_toBottomOf="@+id/password_edit"
         android:textColor="@color/white"/>
-
-    <Button
-        android:id="@+id/button_signup"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/basic_margin"
-        android:layout_marginEnd="10dp"
-        android:text="@string/signup"
-        android:backgroundTint="@color/white"
-        app:layout_constraintEnd_toStartOf="@+id/button_continue"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_login" />
-
-    <Button
-        android:id="@+id/button_continue"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="@dimen/basic_margin"
-        android:text="@string/continuar"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:backgroundTint="@color/white"
-        app:layout_constraintStart_toEndOf="@+id/button_signup"
-        app:layout_constraintTop_toBottomOf="@+id/button_login" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
