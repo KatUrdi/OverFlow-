@@ -28,6 +28,8 @@ class Gastos_activity : AppCompatActivity() {
             val intent = Intent(this, Tablas_activity::class.java)
             startActivity(intent)
         }
+        // recycler view
+        setRecyclerView()
         // flotting button
         // initializing variables of floating
         // action button on below line.
@@ -88,7 +90,7 @@ class Gastos_activity : AppCompatActivity() {
         // click listener for our home fab
         binding.ingresoFab.setOnClickListener {
             // on below line we are displaying a toast message.
-            val intent = Intent(this,Ingreso_activity::class.java)
+            val intent = Intent(this, Ingreso_activity::class.java)
             startActivity(intent)
         }
 
@@ -99,6 +101,21 @@ class Gastos_activity : AppCompatActivity() {
             val intent = Intent(this, Compra_activity::class.java)
             startActivity(intent)
         }
-        
+        // recycler View
+
     }
+
+    fun setRecyclerView() {
+        val mutableList = mutableListOf<String>()
+        mutableList.add("70")
+        mutableList.add("8")
+
+        presentationCardAdapter.addPresentationCards(mutableList)
+
+        binding.recyclerViewItemGastos.apply {
+            layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+            adapter = presentationCardAdapter
+        }
+    }
+
 }
