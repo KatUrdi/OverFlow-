@@ -31,7 +31,7 @@ class LoginActivity : AppCompatActivity() {
                 if (validateData(email, password))
                     loginUser(email, password)
             }
-            buttonSignup.setOnClickListener {
+            /*buttonSignup.setOnClickListener {
                 val email = emailEdit.text.toString()
                 val password = passwordEdit.text.toString()
                 if (validateData(email, password))
@@ -43,7 +43,7 @@ class LoginActivity : AppCompatActivity() {
                 } else {
                     showMessage("Debes tener una sesión iniciada para continuar")
                 }
-            }
+            }*/
         }
     }
 
