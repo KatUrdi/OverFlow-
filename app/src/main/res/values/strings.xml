@@ -3,7 +3,7 @@
     <string name="moneyfy"><b>MoneyFy</b></string>
     <string name="balance">Balance</string>
     <string name="tablas"><b>Tablas</b></string>
-    <string name="gastos"><b>Gastos</b></string>
+    <string name="Compra"><b>Compra</b></string>
     <string name="general"><b>General</b></string>
     <string name="ingresos"><b>Ingresos</b></string>
     <string name="gastos_minusculas"><b>Gastos</b></string>
@@ -13,7 +13,6 @@
     <string name="alquiler"><b>alquiler</b></string>
     <string name="otros"><b>otros</b></string>
     <string name="gastos_mensuales"><b>Gastos Mensuales</b></string>
-    <string name="dolar">$</string>
     <string name="aceptar"><b>aceptar</b></string>
     <string name="Ingreso"><b>Ingreso</b></string>
     <string name="Gasto"><b>Gasto</b></string>

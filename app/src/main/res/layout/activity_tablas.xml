@@ -96,7 +96,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:backgroundTint="#9759EF"
-        android:text="@string/gastos"
+        android:text="@string/Gasto"
         android:textColor="#ffffff"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/guideline1"
@@ -172,17 +172,52 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="@id/textView_gastos" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/Add_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/icono_plus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="#00BCD4"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/compra_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/icono_compra"
+        app:fabSize="mini"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/Add_fab"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="#00BCD4"/>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/ingreso_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/icono_ingreso"
+        app:fabSize="mini"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/compra_fab"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="#00BCD4"/>
     <ProgressBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/progress_horizontal"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        android:max="69"
-        android:progress="6"
+        android:background="@color/purple_500"
         android:layout_marginBottom="40dp"
-        android:layout_marginHorizontal="30dp"
+        android:layout_marginHorizontal="40dp"
         app:layout_constraintTop_toBottomOf="@+id/gastos_ingresos"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
