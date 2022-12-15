@@ -29,7 +29,7 @@ class Compra_activity : AppCompatActivity() {
         initSpinner()
     }
 
-    fun managePopup() {
+    private fun managePopup() {
 
         bindingPopup = ActivityCompraBinding.inflate(layoutInflater)
         val dialog = Dialog(this)
@@ -45,7 +45,7 @@ class Compra_activity : AppCompatActivity() {
 
     }
 
-    fun initSpinner() {
+    private fun initSpinner() {
         val dataList = mutableListOf<String>()
         dataList.add("Comida")
         dataList.add("Ropa")
