@@ -99,6 +99,6 @@ class Gastos_activity : AppCompatActivity() {
             val intent = Intent(this, Compra_activity::class.java)
             startActivity(intent)
         }
-
+        
     }
 }

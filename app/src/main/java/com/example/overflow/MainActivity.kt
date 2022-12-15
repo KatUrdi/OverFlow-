@@ -106,6 +106,23 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, Compra_activity::class.java)
             startActivity(intent)
         }
+        // progress bar "comida"
+        binding.progressComida.max = 100
+        binding.progressComida.progress = 68
+
+
+        // progress bar "ropa"
+        binding.progressRopa.max = 100
+        binding.progressRopa.progress = 68
+
+
+        // progress bar "alquiler"
+        binding.progressAlquiler.max = 100
+        binding.progressAlquiler.progress = 68
+
+        // progress bar "otros"
+        binding.progressOtros.max = 100
+        binding.progressOtros.progress = 68
     }
 
     }
