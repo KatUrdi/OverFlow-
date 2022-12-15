@@ -11,6 +11,11 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class Gastos_activity : AppCompatActivity() {
 
+    companion object{
+        // id
+        val MESSAGE2: String = "new2_message"
+    }
+
     private lateinit var binding: ActivityGastosBinding
     lateinit var addFAB: FloatingActionButton
     lateinit var ingresoFAB: FloatingActionButton
