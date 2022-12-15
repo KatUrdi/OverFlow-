@@ -21,7 +21,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
-
         setContentView(view)
 
         // switch to the activity "tablas"
@@ -66,7 +65,7 @@ class MainActivity : AppCompatActivity() {
                 compraFAB.visibility = View.VISIBLE
 
                 // on below line we are checking image icon of add fab
-                addFAB.setImageDrawable(resources.getDrawable(R.drawable.ic_baseline_add_24))
+                addFAB.setImageDrawable(resources.getDrawable(R.drawable.icono_plus))
 
                 // on below line we are changing
                 // fab visible to true
@@ -84,7 +83,7 @@ class MainActivity : AppCompatActivity() {
                 compraFAB.visibility = View.GONE
 
                 // on below line we are changing image source for add fab
-                addFAB.setImageDrawable(resources.getDrawable(R.drawable.ic_baseline_add_24))
+                addFAB.setImageDrawable(resources.getDrawable(R.drawable.icono_plus))
 
                 // on below line we are changing
                 // fab visible to false.
@@ -96,7 +95,7 @@ class MainActivity : AppCompatActivity() {
         // click listener for our home fab
         binding.ingresoFab.setOnClickListener {
             // on below line we are displaying a toast message.
-            val intent = Intent(this, Ingreso_activity::class.java)
+            val intent = Intent(this,Ingreso_activity::class.java)
             startActivity(intent)
         }
 
@@ -107,24 +106,6 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, Compra_activity::class.java)
             startActivity(intent)
         }
-
-        // progress bar "comida"
-        binding.progressComida.max = 100
-        binding.progressComida.progress = 68
-
-
-        // progress bar "ropa"
-        binding.progressRopa.max = 100
-        binding.progressRopa.progress = 68
-
-
-        // progress bar "alquiler"
-        binding.progressAlquiler.max = 100
-        binding.progressAlquiler.progress = 68
-
-        // progress bar "otros"
-        binding.progressOtros.max = 100
-        binding.progressOtros.progress = 68
     }
 
-}
+    }

@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">OverFlow</string>
+    <string name="app_name"><b>MoneyFy</b></string>
     <string name="moneyfy"><b>MoneyFy</b></string>
     <string name="balance">Balance</string>
     <string name="tablas"><b>Tablas</b></string>
-    <string name="gastos"><b>Gastos</b></string>
+    <string name="Compra"><b>Compra</b></string>
     <string name="general"><b>General</b></string>
     <string name="ingresos"><b>Ingresos</b></string>
     <string name="gastos_minusculas"><b>Gastos</b></string>
@@ -22,5 +22,5 @@
     <string name="login"><b>login</b></string>
     <string name="Password"><b>Password</b></string>
     <string name="Correo"><b>Correo</b></string>
-    <string name="fecha">FECHA</string>
+
 </resources>
