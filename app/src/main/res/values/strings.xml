@@ -22,5 +22,6 @@
     <string name="login"><b>login</b></string>
     <string name="Password"><b>Password</b></string>
     <string name="Correo"><b>Correo</b></string>
+    <string name="gastos">Gastos</string>
 
 </resources>
