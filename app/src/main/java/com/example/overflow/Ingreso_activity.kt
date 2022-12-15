@@ -10,7 +10,6 @@ import com.example.overflow.databinding.ActivityIngresoBinding
 
 class Ingreso_activity : AppCompatActivity() {
     private lateinit var binding: ActivityIngresoBinding
-
     private lateinit var bindingPopup: ActivityIngresoBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +19,6 @@ class Ingreso_activity : AppCompatActivity() {
         setContentView(view)
         binding.buttonPopup.setOnClickListener {
             managePopup()
-
         }
     }
     fun managePopup() {
@@ -37,8 +35,5 @@ class Ingreso_activity : AppCompatActivity() {
             dialog.dismiss()
         }
     }
-
-
-
 }
 
