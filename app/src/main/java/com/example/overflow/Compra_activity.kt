@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.overflow.databinding.ActivityCompraBinding
 
-
 class Compra_activity : AppCompatActivity() {
     private lateinit var binding: ActivityCompraBinding
 
