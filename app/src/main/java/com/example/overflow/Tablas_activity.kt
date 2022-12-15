@@ -100,6 +100,8 @@ class Tablas_activity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        // progress bar
+        binding.progressHorizontal.max = 100
+        binding.progressHorizontal.progress = 50
     }
-
-    }
+}

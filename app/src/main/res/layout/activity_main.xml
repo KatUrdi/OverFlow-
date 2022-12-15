@@ -59,7 +59,7 @@
         android:layout_weight="1"
         android:background="@drawable/contenedor"
         app:layout_constraintBottom_toBottomOf="@id/guideline2"
-        app:layout_constraintTop_toTopOf="@id/guideline1" />
+        app:layout_constraintTop_toTopOf="@id/guideline1"/>
 
     <View
         android:id="@+id/view_3"
@@ -69,7 +69,7 @@
         android:layout_weight="1"
         android:background="@drawable/contenedor"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="@id/guideline2" />
+        app:layout_constraintTop_toTopOf="@id/guideline2"/>
 
     <androidx.cardview.widget.CardView
         android:layout_width="50dp"
