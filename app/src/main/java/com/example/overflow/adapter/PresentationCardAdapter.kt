@@ -36,14 +36,9 @@ class PresentationCardAdapter :
         fun binding(data: String) {
             binding.textViewFecha.text = data
             binding.textCosto.text=data
-
-
-        /*
-            binding.textViewName.text = data
-            binding.imageProfile.setImageResource(R.drawable.vamoacalmarno)
-            binding.textViewHobie.text = context?.getText(R.string.hobie)*/
+            binding.imageSetComida.setImageResource(R.drawable.color_alquiler)
+            binding.textCosto.text = data
         }
-
     }
 
     fun addPresentationCards(list: List<String>) {
