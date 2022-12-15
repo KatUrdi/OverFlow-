@@ -25,7 +25,6 @@ class PresentationCardAdapter :
         )
     }
 
-
     override fun onBindViewHolder(holder: PresentationCardViewHolder, position: Int) {
         holder.binding(presentationCard[position])
     }
@@ -37,18 +36,17 @@ class PresentationCardAdapter :
         fun binding(data: String) {
             binding.textViewFecha.text = data
             binding.textCosto.text=data
-            when (itemId){
 
-            }
+
         /*
             binding.textViewName.text = data
             binding.imageProfile.setImageResource(R.drawable.vamoacalmarno)
             binding.textViewHobie.text = context?.getText(R.string.hobie)*/
         }
+
     }
 
     fun addPresentationCards(list: List<String>) {
-        presentationCard.clear()
         presentationCard.addAll(list)
     }
 }
