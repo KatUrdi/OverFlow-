@@ -127,13 +127,11 @@ class MainActivity : AppCompatActivity() {
         binding.progressComida.max = 100
         binding.progressComida.progress = 67
 
-
         // progress bar "ropa"
         binding.progressRopa.max = 100
         if (monto1 != null) {
             binding.progressRopa.progress = monto1
         }
-
 
         // progress bar "alquiler"
         binding.progressAlquiler.max = 100
@@ -142,6 +140,7 @@ class MainActivity : AppCompatActivity() {
         // progress bar "otros"
         binding.progressOtros.max = 100
         binding.progressOtros.progress = 68
+
     }
 
 }
