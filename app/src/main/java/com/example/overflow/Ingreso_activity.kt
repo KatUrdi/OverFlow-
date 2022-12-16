@@ -7,6 +7,7 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.preference.PreferenceManager
 import android.widget.EditText
 import android.widget.Toast
 import com.example.overflow.databinding.ActivityCompraBinding
@@ -18,12 +19,14 @@ class Ingreso_activity : AppCompatActivity() {
 
     private lateinit var bindingPopup: ActivityIngresoBinding
 
-    private lateinit var preferences: SharedPreferences
+    private lateinit var preference: SharedPreferences
+
+    var spinnerSelected = ""
+    var radioSelected = ""
 
     companion object {
         val monto: Int = 15
         val fecha: String = "12/12/2022"
-
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,6 +37,7 @@ class Ingreso_activity : AppCompatActivity() {
 
         binding.buttonPopup.setOnClickListener {
             validDate(binding.fechaIngreso.text.toString())
+            managePreferences()
         }
     }
 
@@ -65,6 +69,21 @@ class Ingreso_activity : AppCompatActivity() {
              else
                 managePopup2()
         }
+    }
+
+    fun managePreferences(){
+        val fecha = "@id_fecha"
+        preference = PreferenceManager.getDefaultSharedPreferences(this)
+        binding.buttonPopup.setOnClickListener {
+            val editor = preference.edit()
+            var savedData = binding.fechaIngreso.text.toString()
+            editor.putString(fecha, savedData)
+            editor.apply()
+        }
+        /*binding.buttonMostrar.setOnClickListener {
+            val data = preference.getString(fecha,"no hay nada ")
+            binding.textVieMostrar.text = "$data"
+        }*/
     }
 }
 

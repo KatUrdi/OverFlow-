@@ -7,6 +7,7 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.preference.PreferenceManager
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -18,7 +19,8 @@ class Compra_activity : AppCompatActivity() {
     private lateinit var binding: ActivityCompraBinding
     private lateinit var bindingPopup: ActivityCompraBinding
     var spinnerSelected = ""
-    private lateinit var preferences: SharedPreferences
+    private lateinit var preference: SharedPreferences
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +29,7 @@ class Compra_activity : AppCompatActivity() {
         setContentView(view)
         binding.buttonPopup.setOnClickListener {
             managePopup()
+            managePreferences()
         }
         initSpinner()
     }
@@ -86,6 +89,21 @@ class Compra_activity : AppCompatActivity() {
                 managePopup()
             else
                 managePopup2()
+        }
+    }
+
+    fun managePreferences(){
+        val fecha = "@id_fecha"
+        preference = PreferenceManager.getDefaultSharedPreferences(this)
+        binding.buttonPopup.setOnClickListener {
+            val editor = preference.edit()
+            var savedData = binding.fechaCompra.text.toString()
+            editor.putString(fecha, savedData)
+            editor.apply()
+        }
+        binding.buttonMostrar.setOnClickListener {
+            val data = preference.getString(fecha,"no hay nada ")
+            binding.textVieMostrar.text = "$data"
         }
     }
 }
