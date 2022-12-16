@@ -29,6 +29,15 @@
         android:background="#9759EF"
         app:layout_constraintBottom_toBottomOf="@id/guideline1"
         app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textView_fecha_compra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10/02/22"
+        android:textColor="@color/purple_500"
+        android:textSize="5sp"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="50dp"

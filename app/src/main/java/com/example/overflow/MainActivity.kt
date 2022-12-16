@@ -11,8 +11,9 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
     companion object {
-        var MONTO: String = "0"
+        var MONTOCOMPRA: String = "0"
         var FECHA: String = "12/12/2022"
+        var MONTOINGRESOS: String = "0"
         var ID: String = "id"
     }
 
@@ -27,19 +28,27 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        var monto = intent.getStringExtra(MONTO)
+        var monto = intent.getStringExtra(MONTOCOMPRA)
         var monto1 = monto?.toInt()
 
+        val fecha = intent.getStringExtra(FECHA)
 
-        // switch to the activity "tablas"
-        binding.buttonTablas.setOnClickListener {
-            val intent = Intent(this, Tablas_activity::class.java)
+        // pasar datos to the activity "tablas"
+        binding.buttonTablas.setOnClickListener{
+            val intent=Intent(this,Tablas_activity::class.java)
+            intent.apply {
+                putExtra(Compra_activity.MONTOCOMPRA,monto)
+            }
             startActivity(intent)
         }
 
-        // switch to the activity "gastos"
-        binding.buttonGastos.setOnClickListener {
-            val intent = Intent(this, Gastos_activity::class.java)
+        // pasar datos to the activity "gasto"
+        binding.buttonGastos.setOnClickListener{
+            val intent=Intent(this,Gastos_activity::class.java)
+            intent.apply {
+                putExtra(Compra_activity.MONTOCOMPRA,monto)
+                putExtra(Compra_activity.FECHA,binding.textViewFechaCompra.text.toString())
+            }
             startActivity(intent)
         }
 

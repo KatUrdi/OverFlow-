@@ -10,7 +10,12 @@ import com.example.overflow.databinding.ActivityTablasBinding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class Tablas_activity : AppCompatActivity() {
-
+    companion object {
+        var MONTOCOMPRA: String = "0"
+        var FECHA: String = "12/12/2022"
+        var MONTOINGRESOS: String = "0"
+        var ID: String = "id"
+    }
     private lateinit var binding: ActivityTablasBinding
     lateinit var addFAB: FloatingActionButton
     lateinit var ingresoFAB: FloatingActionButton
@@ -22,11 +27,9 @@ class Tablas_activity : AppCompatActivity() {
         binding = ActivityTablasBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        // cambiar a la cativity gastos
-        binding.buttonGastos.setOnClickListener {
-            val intent = Intent(this, Gastos_activity::class.java)
-            startActivity(intent)
-        }
+        var monto = intent.getStringExtra(MainActivity.MONTOCOMPRA)
+        var monto1 = monto?.toInt()
+
 
         // flotting button
         // initializing variables of floating
@@ -102,6 +105,8 @@ class Tablas_activity : AppCompatActivity() {
 
         // progress bar
         binding.progressHorizontal.max = 100
-        binding.progressHorizontal.progress = 50
+        if (monto1 != null) {
+            binding.progressHorizontal.progress = monto1
+        }
     }
 }

@@ -19,8 +19,9 @@ interface OnItemSelectedListener
 
 class Compra_activity : AppCompatActivity() {
     companion object {
-        var MONTO: String = "56"
+        var MONTOCOMPRA: String = "0"
         var FECHA: String = "12/12/2022"
+        var MONTOINGRESOS: String = "0"
         var ID:String = "id"
     }
 
@@ -43,7 +44,7 @@ class Compra_activity : AppCompatActivity() {
         binding.buttonHome.setOnClickListener{
             val intent=Intent(this,MainActivity::class.java)
             intent.apply {
-                putExtra(MONTO,binding.montoCompra.text.toString())
+                putExtra(MONTOCOMPRA,binding.montoCompra.text.toString())
                 putExtra(FECHA,binding.fechaCompra.text.toString())
             }
             startActivity(intent)
@@ -105,7 +106,7 @@ class Compra_activity : AppCompatActivity() {
                 /* - or / */ && (date[5] == '/' || date[5] == '-')) {
                 managePopup()
                 managePreferences()
-                pasarDatos()
+
             }else
                 managePopup2()
         }
@@ -128,8 +129,5 @@ class Compra_activity : AppCompatActivity() {
             editor.apply()
         }
     }
-    fun pasarDatos(){
 
-    // putExtraData(FECHA,binding.fechaCompra.text.toString())
-    }
 }

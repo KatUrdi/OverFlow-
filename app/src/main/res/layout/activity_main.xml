@@ -106,7 +106,15 @@
         android:textSize="45sp"
         app:layout_constraintLeft_toLeftOf="@+id/guideline_medio"
         app:layout_constraintTop_toTopOf="parent" />
-
+    <TextView
+        android:id="@+id/textView_fecha_compra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10/02/22"
+        android:textColor="@color/purple_500"
+        android:textSize="5sp"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <TextView
         android:id="@+id/textView_balance"
         android:layout_width="wrap_content"

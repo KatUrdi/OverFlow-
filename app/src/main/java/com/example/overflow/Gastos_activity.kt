@@ -11,10 +11,12 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class Gastos_activity : AppCompatActivity() {
     companion object {
-        var MONTO: String = "0"
+        var MONTOCOMPRA: String = "0"
         var FECHA: String = "12/12/2022"
+        var MONTOINGRESOS: String = "0"
         var ID: String = "id"
     }
+
     private lateinit var binding: ActivityGastosBinding
     lateinit var addFAB: FloatingActionButton
     lateinit var ingresoFAB: FloatingActionButton
@@ -27,11 +29,9 @@ class Gastos_activity : AppCompatActivity() {
         binding = ActivityGastosBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        // switch to the activity "tablas"
-        binding.buttonTablas.setOnClickListener {
-            val intent = Intent(this, Tablas_activity::class.java)
-            startActivity(intent)
-        }
+
+        MONTOINGRESOS = intent.getStringExtra(MainActivity.MONTOCOMPRA).toString()
+        val fecha = intent.getStringExtra(MainActivity.FECHA)
         // recycler view
         setRecyclerView()
         // flotting button
@@ -105,14 +105,13 @@ class Gastos_activity : AppCompatActivity() {
             val intent = Intent(this, Compra_activity::class.java)
             startActivity(intent)
         }
-        // recycler View
 
     }
 
     fun setRecyclerView() {
         val mutableList = mutableListOf<String>()
-        mutableList.add("70")
-        mutableList.add("8")
+        mutableList.add(MONTOINGRESOS)
+
 
         presentationCardAdapter.addPresentationCards(mutableList)
 
