@@ -259,7 +259,6 @@
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:background="#F1E7E2"
         android:indeterminateTint="#FF8244"
-
         android:layout_marginStart="40dp"
         app:layout_constraintTop_toTopOf="@+id/textView_comida"
         app:layout_constraintRight_toRightOf="@id/guideline_medio"
