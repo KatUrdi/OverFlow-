@@ -16,9 +16,10 @@ class Ingreso_activity : AppCompatActivity() {
     private lateinit var binding: ActivityIngresoBinding
 
     private lateinit var bindingPopup: ActivityIngresoBinding
-    companion object{
-        val monto:Int= 15
-        val fecha:String="12/12/2022"
+
+    companion object {
+        val monto: Int = 15
+        val fecha: String = "12/12/2022"
 
     }
 
@@ -32,6 +33,7 @@ class Ingreso_activity : AppCompatActivity() {
             validDate(binding.fechaIngreso.text.toString())
         }
     }
+
     fun managePopup() {
         bindingPopup = ActivityIngresoBinding.inflate(layoutInflater)
         val dialog = Dialog(this)
@@ -44,6 +46,7 @@ class Ingreso_activity : AppCompatActivity() {
         }
 
     }
+
     fun managePopup2() {
         bindingPopup = ActivityIngresoBinding.inflate(layoutInflater)
         val dialog = Dialog(this)
@@ -51,14 +54,16 @@ class Ingreso_activity : AppCompatActivity() {
             .show()
 
     }
-    fun validDate(date:String){
+
+    fun validDate(date: String) {
         date.toCharArray()
-        if (date.length == 8){
-            if ((date[3] == '/'|| date[3] == '-') && (date[6] == '/'|| date[6] == '-'))
-                managePopup()
-            else
-                managePopup2()
-        }else{
+        if (date.length == 8) {
+            if ((date[2] == '/' || date[2] == '-') && (date[5] == '/' || date[5] == '-')) {
+                if ((date[0] == '1' || date[0] == '2' || date[0] == '3' || date[0] == '0'))
+                    managePopup()
+            }else
+                    managePopup2()
+        } else {
             managePopup2()
         }
     }
