@@ -2,6 +2,7 @@ package com.example.overflow
 
 import android.app.Dialog
 import android.content.Intent
+import android.content.SharedPreferences
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
@@ -16,6 +17,8 @@ class Ingreso_activity : AppCompatActivity() {
     private lateinit var binding: ActivityIngresoBinding
 
     private lateinit var bindingPopup: ActivityIngresoBinding
+
+    private lateinit var preferences: SharedPreferences
 
     companion object {
         val monto: Int = 15
