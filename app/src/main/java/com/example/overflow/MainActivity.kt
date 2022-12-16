@@ -40,6 +40,7 @@ class MainActivity : AppCompatActivity() {
                 putExtra(Compra_activity.MONTOCOMPRA,monto)
             }
             startActivity(intent)
+            finish()
         }
 
         // pasar datos to the activity "gasto"
@@ -50,6 +51,7 @@ class MainActivity : AppCompatActivity() {
                 putExtra(Compra_activity.FECHA,binding.textViewFechaCompra.text.toString())
             }
             startActivity(intent)
+            finish()
         }
 
         // flotting button
@@ -114,6 +116,7 @@ class MainActivity : AppCompatActivity() {
             // on below line we are displaying a toast message.
             val intent = Intent(this, Ingreso_activity::class.java)
             startActivity(intent)
+            finish()
         }
 
         // on below line we are adding on
@@ -122,10 +125,13 @@ class MainActivity : AppCompatActivity() {
             // on below line we are displaying a toast message.
             val intent = Intent(this, Compra_activity::class.java)
             startActivity(intent)
+            finish()
         }
         // progress bar "comida"
         binding.progressComida.max = 100
-        binding.progressComida.progress = 67
+        if (monto1 != null) {
+            binding.progressComida.progress = monto1
+        }
 
         // progress bar "ropa"
         binding.progressRopa.max = 100
@@ -135,11 +141,15 @@ class MainActivity : AppCompatActivity() {
 
         // progress bar "alquiler"
         binding.progressAlquiler.max = 100
-        binding.progressAlquiler.progress = 68
+        if (monto1 != null) {
+            binding.progressAlquiler.progress = monto1
+        }
 
         // progress bar "otros"
         binding.progressOtros.max = 100
-        binding.progressOtros.progress = 68
+        if (monto1 != null) {
+            binding.progressOtros.progress = monto1
+        }
 
     }
 

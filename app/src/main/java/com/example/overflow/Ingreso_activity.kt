@@ -35,6 +35,13 @@ class Ingreso_activity : AppCompatActivity() {
         binding.buttonPopup.setOnClickListener {
             validDate(binding.fechaIngreso.text.toString())
         }
+        binding.buttonHome.setOnClickListener{
+            val intent=Intent(this,MainActivity::class.java)
+            intent.apply {
+                putExtra(Compra_activity.MONTOCOMPRA,binding.montoIngreso.text.toString())
+            }
+            startActivity(intent)
+        }
     }
 
     fun managePopup() {
