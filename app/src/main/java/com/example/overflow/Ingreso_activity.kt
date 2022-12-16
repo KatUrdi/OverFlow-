@@ -20,14 +20,11 @@ class Ingreso_activity : AppCompatActivity() {
     private lateinit var bindingPopup: ActivityIngresoBinding
 
     private lateinit var preference: SharedPreferences
-
-    var spinnerSelected = ""
-    var radioSelected = ""
-
+/*
     companion object {
-        val monto: Int = 15
+        val monto: String = "56"
         val fecha: String = "12/12/2022"
-    }
+    }*/
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,7 +34,6 @@ class Ingreso_activity : AppCompatActivity() {
 
         binding.buttonPopup.setOnClickListener {
             validDate(binding.fechaIngreso.text.toString())
-            managePreferences()
         }
     }
 
@@ -64,26 +60,30 @@ class Ingreso_activity : AppCompatActivity() {
     fun validDate(date: String) {
         date.toCharArray()
         if (date.length == 8) {
-            if (/*day*/(date[0] == '1' || date[0] == '2' || date[0] == '3' || date[0] == '0') && (date[1] == '1' || date[1] == '2' || date[1] == '3' || date[1] == '4' || date[1] == '5' || date[1] == '6' || date[1] == '7' || date[1] == '8' || date[1] == '9' || date[1] == '0') /* - or / */ && (date[2] == '/' || date[2] == '-') /*moth*/ && (date[3] == '1' || date[3] == '0') && (date[4] == '1' || date[4] == '2' || date[4] == '3' || date[4] == '4' || date[4] == '5' || date[4] == '6' || date[4] == '7' || date[4] == '8' || date[4] == '9' || date[4] == '0') /* - or / */ && (date[5] == '/' || date[5] == '-'))
-               managePopup()
-             else
+            if (/*day*/(date[0] == '1' || date[0] == '2' || date[0] == '3' || date[0] == '0') && (date[1] == '1' || date[1] == '2' || date[1] == '3' || date[1] == '4' || date[1] == '5' || date[1] == '6' || date[1] == '7' || date[1] == '8' || date[1] == '9' || date[1] == '0')
+                /* - or / */ && (date[2] == '/' || date[2] == '-')
+                /*moth*/ && (date[3] == '1' || date[3] == '0') && (date[4] == '1' || date[4] == '2' || date[4] == '3' || date[4] == '4' || date[4] == '5' || date[4] == '6' || date[4] == '7' || date[4] == '8' || date[4] == '9' || date[4] == '0')
+                /* - or / */ && (date[5] == '/' || date[5] == '-')){
+                managePopup()
+            managePreferences()
+        }else
                 managePopup2()
         }
     }
 
     fun managePreferences(){
-        val fecha = "@id_fecha"
+        val monto = "@id_monto"
         preference = PreferenceManager.getDefaultSharedPreferences(this)
         binding.buttonPopup.setOnClickListener {
             val editor = preference.edit()
-            var savedData = binding.fechaIngreso.text.toString()
-            editor.putString(fecha, savedData)
-            editor.apply()
+            var savedData = binding.montoIngreso.text.toString()
+            editor.putString(monto, savedData)
+            editor.commit()
         }
-        /*binding.buttonMostrar.setOnClickListener {
-            val data = preference.getString(fecha,"no hay nada ")
-            binding.textVieMostrar.text = "$data"
-        }*/
+        binding.buttonMostrar.setOnClickListener {
+            val data = preference.getString(monto,"no hay nada ")
+            binding.textView.text = "$data"
+        }
     }
 }
 
