@@ -18,6 +18,14 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initUi()
+        binding.buttonSignup.setOnClickListener {
+            val intent = Intent(this, singup_activity::class.java)
+            startActivity(intent)
+        }
+        binding.buttonLogin.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun initUi() {

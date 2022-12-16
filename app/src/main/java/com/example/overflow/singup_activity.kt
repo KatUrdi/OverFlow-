@@ -18,6 +18,10 @@ class singup_activity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initUi()
+        binding.buttonSignup.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun initUi() {
