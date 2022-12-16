@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name"><b>MoneyFy</b></string>
-    <string name="moneyfy"><b>MoneyFy</b></string>
     <string name="balance">Balance</string>
     <string name="tablas"><b>Tablas</b></string>
     <string name="Compra"><b>Compra</b></string>

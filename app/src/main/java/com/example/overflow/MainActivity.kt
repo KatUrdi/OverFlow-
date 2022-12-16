@@ -4,12 +4,18 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
-import androidx.recyclerview.widget.RecyclerView
+import com.example.overflow.activity.Gastos_activity
+import com.example.overflow.activity.Tablas_activity
 import com.example.overflow.databinding.ActivityMainBinding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
+    companion object {
+        var MONTOCOMPRA: String = "0"
+        var FECHA: String = "12/12/2022"
+        var MONTOINGRESOS: String = "0"
+        var ID: String = "id"
+    }
 
     private lateinit var binding: ActivityMainBinding
     lateinit var addFAB: FloatingActionButton
@@ -22,17 +28,30 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+        var monto = intent.getStringExtra(MONTOCOMPRA)
+        var monto1 = monto?.toInt()
 
-        // switch to the activity "tablas"
-        binding.buttonTablas.setOnClickListener {
-            val intent = Intent(this, Tablas_activity::class.java)
+        val fecha = intent.getStringExtra(FECHA)
+
+        // pasar datos to the activity "tablas"
+        binding.buttonTablas.setOnClickListener{
+            val intent=Intent(this, Tablas_activity::class.java)
+            intent.apply {
+                putExtra(Compra_activity.MONTOCOMPRA,monto)
+            }
             startActivity(intent)
+            finish()
         }
 
-        // switch to the activity "gastos"
-        binding.buttonGastos.setOnClickListener {
-            val intent = Intent(this, Gastos_activity::class.java)
+        // pasar datos to the activity "gasto"
+        binding.buttonGastos.setOnClickListener{
+            val intent=Intent(this, Gastos_activity::class.java)
+            intent.apply {
+                putExtra(Compra_activity.MONTOCOMPRA,monto)
+                putExtra(Compra_activity.FECHA,binding.textViewFechaCompra.text.toString())
+            }
             startActivity(intent)
+            finish()
         }
 
         // flotting button
@@ -95,8 +114,9 @@ class MainActivity : AppCompatActivity() {
         // click listener for our home fab
         binding.ingresoFab.setOnClickListener {
             // on below line we are displaying a toast message.
-            val intent = Intent(this,Ingreso_activity::class.java)
+            val intent = Intent(this, Ingreso_activity::class.java)
             startActivity(intent)
+            finish()
         }
 
         // on below line we are adding on
@@ -105,24 +125,32 @@ class MainActivity : AppCompatActivity() {
             // on below line we are displaying a toast message.
             val intent = Intent(this, Compra_activity::class.java)
             startActivity(intent)
+            finish()
         }
         // progress bar "comida"
         binding.progressComida.max = 100
-        binding.progressComida.progress = 68
-
+        if (monto1 != null) {
+            binding.progressComida.progress = monto1
+        }
 
         // progress bar "ropa"
         binding.progressRopa.max = 100
-        binding.progressRopa.progress = 68
-
+        if (monto1 != null) {
+            binding.progressRopa.progress = monto1
+        }
 
         // progress bar "alquiler"
         binding.progressAlquiler.max = 100
-        binding.progressAlquiler.progress = 68
+        if (monto1 != null) {
+            binding.progressAlquiler.progress = monto1
+        }
 
         // progress bar "otros"
         binding.progressOtros.max = 100
-        binding.progressOtros.progress = 68
-    }
+        if (monto1 != null) {
+            binding.progressOtros.progress = monto1
+        }
 
     }
+
+}

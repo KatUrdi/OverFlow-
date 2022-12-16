@@ -1,16 +1,23 @@
-package com.example.overflow
+package com.example.overflow.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
-import com.example.overflow.databinding.ActivityMainBinding
+import com.example.overflow.Compra_activity
+import com.example.overflow.Ingreso_activity
+import com.example.overflow.MainActivity
+import com.example.overflow.R
 import com.example.overflow.databinding.ActivityTablasBinding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class Tablas_activity : AppCompatActivity() {
-
+    companion object {
+        var MONTOCOMPRA: String = "0"
+        var FECHA: String = "12/12/2022"
+        var MONTOINGRESOS: String = "0"
+        var ID: String = "id"
+    }
     private lateinit var binding: ActivityTablasBinding
     lateinit var addFAB: FloatingActionButton
     lateinit var ingresoFAB: FloatingActionButton
@@ -22,10 +29,13 @@ class Tablas_activity : AppCompatActivity() {
         binding = ActivityTablasBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        // cambiar a la cativity gastos
-        binding.buttonGastos.setOnClickListener {
-            val intent = Intent(this, Gastos_activity::class.java)
+        var monto = intent.getStringExtra(MainActivity.MONTOCOMPRA)
+        var monto1 = monto?.toInt()
+
+        binding.buttonHome.setOnClickListener{
+            val intent=Intent(this,MainActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         // flotting button
@@ -88,8 +98,9 @@ class Tablas_activity : AppCompatActivity() {
         // click listener for our home fab
         binding.ingresoFab.setOnClickListener {
             // on below line we are displaying a toast message.
-            val intent = Intent(this,Ingreso_activity::class.java)
+            val intent = Intent(this, Ingreso_activity::class.java)
             startActivity(intent)
+            finish()
         }
 
         // on below line we are adding on
@@ -98,10 +109,13 @@ class Tablas_activity : AppCompatActivity() {
             // on below line we are displaying a toast message.
             val intent = Intent(this, Compra_activity::class.java)
             startActivity(intent)
+            finish()
         }
 
         // progress bar
         binding.progressHorizontal.max = 100
-        binding.progressHorizontal.progress = 50
+        if (monto1 != null) {
+            binding.progressHorizontal.progress = monto1
+        }
     }
 }

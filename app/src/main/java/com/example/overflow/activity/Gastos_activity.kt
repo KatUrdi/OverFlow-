@@ -1,15 +1,25 @@
-package com.example.overflow
+package com.example.overflow.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.overflow.Compra_activity
+import com.example.overflow.Ingreso_activity
+import com.example.overflow.MainActivity
+import com.example.overflow.R
 import com.example.overflow.adapter.PresentationCardAdapter
 import com.example.overflow.databinding.ActivityGastosBinding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class Gastos_activity : AppCompatActivity() {
+    companion object {
+        var MONTOCOMPRA: String = "0"
+        var FECHA: String = "12/12/2022"
+        var MONTOINGRESOS: String = "0"
+        var ID: String = "id"
+    }
 
     companion object{
         // id
@@ -28,11 +38,13 @@ class Gastos_activity : AppCompatActivity() {
         binding = ActivityGastosBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        // switch to the activity "tablas"
-        binding.buttonTablas.setOnClickListener {
-            val intent = Intent(this, Tablas_activity::class.java)
+        binding.buttonHome.setOnClickListener{
+            val intent=Intent(this,MainActivity::class.java)
             startActivity(intent)
+            finish()
         }
+        MONTOINGRESOS = intent.getStringExtra(MainActivity.MONTOCOMPRA).toString()
+        val fecha = intent.getStringExtra(MainActivity.FECHA)
         // recycler view
         setRecyclerView()
         // flotting button
@@ -97,6 +109,7 @@ class Gastos_activity : AppCompatActivity() {
             // on below line we are displaying a toast message.
             val intent = Intent(this, Ingreso_activity::class.java)
             startActivity(intent)
+            finish()
         }
 
         // on below line we are adding on
@@ -105,15 +118,15 @@ class Gastos_activity : AppCompatActivity() {
             // on below line we are displaying a toast message.
             val intent = Intent(this, Compra_activity::class.java)
             startActivity(intent)
+            finish()
         }
-        // recycler View
 
     }
 
     fun setRecyclerView() {
         val mutableList = mutableListOf<String>()
-        mutableList.add("70")
-        mutableList.add("8")
+        mutableList.add(MONTOINGRESOS)
+
 
         presentationCardAdapter.addPresentationCards(mutableList)
 
