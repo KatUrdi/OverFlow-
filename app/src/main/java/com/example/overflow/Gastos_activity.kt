@@ -10,7 +10,11 @@ import com.example.overflow.databinding.ActivityGastosBinding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class Gastos_activity : AppCompatActivity() {
-
+    companion object {
+        var MONTO: String = "0"
+        var FECHA: String = "12/12/2022"
+        var ID: String = "id"
+    }
     private lateinit var binding: ActivityGastosBinding
     lateinit var addFAB: FloatingActionButton
     lateinit var ingresoFAB: FloatingActionButton

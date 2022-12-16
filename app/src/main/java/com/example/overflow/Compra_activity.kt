@@ -39,6 +39,15 @@ class Compra_activity : AppCompatActivity() {
             validDate(binding.fechaCompra.text.toString())
 
         }
+
+        binding.buttonHome.setOnClickListener{
+            val intent=Intent(this,MainActivity::class.java)
+            intent.apply {
+                putExtra(MONTO,binding.montoCompra.text.toString())
+                putExtra(FECHA,binding.fechaCompra.text.toString())
+            }
+            startActivity(intent)
+        }
         initSpinner()
     }
     fun managePopup() {
@@ -120,6 +129,7 @@ class Compra_activity : AppCompatActivity() {
         }
     }
     fun pasarDatos(){
-        // putExtraData(FECHA,binding.fechaCompra.text.toString())
+
+    // putExtraData(FECHA,binding.fechaCompra.text.toString())
     }
 }

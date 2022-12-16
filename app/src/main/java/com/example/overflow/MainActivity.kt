@@ -10,6 +10,11 @@ import com.example.overflow.databinding.ActivityMainBinding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
+    companion object {
+        var MONTO: String = "0"
+        var FECHA: String = "12/12/2022"
+        var ID: String = "id"
+    }
 
     private lateinit var binding: ActivityMainBinding
     lateinit var addFAB: FloatingActionButton
@@ -22,6 +27,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+        var monto = intent.getStringExtra(MONTO)
+        var monto1 = monto?.toInt()
+
 
         // switch to the activity "tablas"
         binding.buttonTablas.setOnClickListener {
@@ -95,7 +103,7 @@ class MainActivity : AppCompatActivity() {
         // click listener for our home fab
         binding.ingresoFab.setOnClickListener {
             // on below line we are displaying a toast message.
-            val intent = Intent(this,Ingreso_activity::class.java)
+            val intent = Intent(this, Ingreso_activity::class.java)
             startActivity(intent)
         }
 
@@ -108,12 +116,14 @@ class MainActivity : AppCompatActivity() {
         }
         // progress bar "comida"
         binding.progressComida.max = 100
-        binding.progressComida.progress = 68
+        binding.progressComida.progress = 67
 
 
         // progress bar "ropa"
         binding.progressRopa.max = 100
-        binding.progressRopa.progress = 68
+        if (monto1 != null) {
+            binding.progressRopa.progress = monto1
+        }
 
 
         // progress bar "alquiler"
@@ -125,4 +135,4 @@ class MainActivity : AppCompatActivity() {
         binding.progressOtros.progress = 68
     }
 
-    }
+}
