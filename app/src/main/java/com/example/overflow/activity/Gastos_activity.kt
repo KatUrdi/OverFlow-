@@ -21,11 +21,6 @@ class Gastos_activity : AppCompatActivity() {
         var ID: String = "id"
     }
 
-    companion object{
-        // id
-        val MESSAGE2: String = "new2_message"
-    }
-
     private lateinit var binding: ActivityGastosBinding
     lateinit var addFAB: FloatingActionButton
     lateinit var ingresoFAB: FloatingActionButton
