@@ -1,36 +1,43 @@
-package com.example.overflow
+package com.example.overflow.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
-import com.example.overflow.databinding.ActivityMainBinding
-import com.example.overflow.databinding.ActivityTablasBinding
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.overflow.Compra_activity
+import com.example.overflow.Ingreso_activity
+import com.example.overflow.MainActivity
+import com.example.overflow.R
+import com.example.overflow.adapter.PresentationCardAdapter
+import com.example.overflow.databinding.ActivityGastosBinding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-class Tablas_activity : AppCompatActivity() {
+class Gastos_activity : AppCompatActivity() {
     companion object {
         var MONTOCOMPRA: String = "0"
         var FECHA: String = "12/12/2022"
         var MONTOINGRESOS: String = "0"
         var ID: String = "id"
     }
-    private lateinit var binding: ActivityTablasBinding
+
+    private lateinit var binding: ActivityGastosBinding
     lateinit var addFAB: FloatingActionButton
     lateinit var ingresoFAB: FloatingActionButton
     lateinit var compraFAB: FloatingActionButton
     var fabVisible = false
+    private val presentationCardAdapter by lazy { PresentationCardAdapter() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityTablasBinding.inflate(layoutInflater)
+        binding = ActivityGastosBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        var monto = intent.getStringExtra(MainActivity.MONTOCOMPRA)
-        var monto1 = monto?.toInt()
 
-
+        MONTOINGRESOS = intent.getStringExtra(MainActivity.MONTOCOMPRA).toString()
+        val fecha = intent.getStringExtra(MainActivity.FECHA)
+        // recycler view
+        setRecyclerView()
         // flotting button
         // initializing variables of floating
         // action button on below line.
@@ -91,7 +98,7 @@ class Tablas_activity : AppCompatActivity() {
         // click listener for our home fab
         binding.ingresoFab.setOnClickListener {
             // on below line we are displaying a toast message.
-            val intent = Intent(this,Ingreso_activity::class.java)
+            val intent = Intent(this, Ingreso_activity::class.java)
             startActivity(intent)
         }
 
@@ -103,10 +110,19 @@ class Tablas_activity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // progress bar
-        binding.progressHorizontal.max = 100
-        if (monto1 != null) {
-            binding.progressHorizontal.progress = monto1
+    }
+
+    fun setRecyclerView() {
+        val mutableList = mutableListOf<String>()
+        mutableList.add(MONTOINGRESOS)
+
+
+        presentationCardAdapter.addPresentationCards(mutableList)
+
+        binding.recyclerViewItemGastos.apply {
+            layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+            adapter = presentationCardAdapter
         }
     }
+
 }

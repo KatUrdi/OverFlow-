@@ -3,6 +3,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.overflow.activity.singup_activity
 import com.example.overflow.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -22,10 +23,7 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this, singup_activity::class.java)
             startActivity(intent)
         }
-        binding.buttonLogin.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
+
     }
 
     private fun initUi() {
@@ -39,24 +37,14 @@ class LoginActivity : AppCompatActivity() {
                 if (validateData(email, password))
                     loginUser(email, password)
             }
-            /*
-            buttonSignup.setOnClickListener {
-                val intent = Intent(this, singup_activity)
-                startActivity(intent)
-            }*/
+
             /*buttonSignup.setOnClickListener {
                 val email = emailEdit.text.toString()
                 val password = passwordEdit.text.toString()
                 if (validateData(email, password))
                     createNewUser(email, password)
             }
-            buttonContinue.setOnClickListener {
-                if (currentUser != null) {
-                    redirectActivity()
-                } else {
-                    showMessage("Debes tener una sesión iniciada para continuar")
-                }
-            }*/
+            */
         }
     }
 

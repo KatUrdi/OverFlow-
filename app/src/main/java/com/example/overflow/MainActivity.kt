@@ -4,8 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
-import androidx.recyclerview.widget.RecyclerView
+import com.example.overflow.activity.Gastos_activity
+import com.example.overflow.activity.Tablas_activity
 import com.example.overflow.databinding.ActivityMainBinding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
 
         // pasar datos to the activity "tablas"
         binding.buttonTablas.setOnClickListener{
-            val intent=Intent(this,Tablas_activity::class.java)
+            val intent=Intent(this, Tablas_activity::class.java)
             intent.apply {
                 putExtra(Compra_activity.MONTOCOMPRA,monto)
             }
@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
 
         // pasar datos to the activity "gasto"
         binding.buttonGastos.setOnClickListener{
-            val intent=Intent(this,Gastos_activity::class.java)
+            val intent=Intent(this, Gastos_activity::class.java)
             intent.apply {
                 putExtra(Compra_activity.MONTOCOMPRA,monto)
                 putExtra(Compra_activity.FECHA,binding.textViewFechaCompra.text.toString())

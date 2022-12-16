@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".Tablas_activity">
+    tools:context=".activity.Tablas_activity">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_medio"
@@ -140,7 +140,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        tools:context=".Tablas_activity">
+        tools:context=".activity.Tablas_activity">
 
         <TextView
             android:id="@+id/textView_ingresos"

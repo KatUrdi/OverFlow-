@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".Gastos_activity">
+    tools:context=".activity.Gastos_activity">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline1"
@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@color/purple_500"
-        tools:context=".Gastos_activity"
+        tools:context=".activity.Gastos_activity"
         app:layout_constraintBottom_toBottomOf="@id/guideline1"
         app:layout_constraintTop_toTopOf="parent">
 
