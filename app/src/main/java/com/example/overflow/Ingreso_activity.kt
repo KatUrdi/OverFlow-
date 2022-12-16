@@ -6,6 +6,7 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.EditText
 import android.widget.Toast
 import com.example.overflow.databinding.ActivityCompraBinding
 import com.example.overflow.databinding.ActivityMainBinding
@@ -28,7 +29,7 @@ class Ingreso_activity : AppCompatActivity() {
         setContentView(view)
 
         binding.buttonPopup.setOnClickListener {
-            managePopup()
+            validDate(binding.fechaIngreso.text.toString())
         }
     }
     fun managePopup() {
@@ -39,14 +40,27 @@ class Ingreso_activity : AppCompatActivity() {
         binding.buttonPopup.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-        }
-        bindingPopup.buttonPopup.setOnClickListener {
             dialog.dismiss()
         }
 
     }
+    fun managePopup2() {
+        bindingPopup = ActivityIngresoBinding.inflate(layoutInflater)
+        val dialog = Dialog(this)
+        Toast.makeText(this@Ingreso_activity, "Fecha mal ingresada", Toast.LENGTH_SHORT)
+            .show()
 
-
-
+    }
+    fun validDate(date:String){
+        date.toCharArray()
+        if (date.length == 8){
+            if ((date[3] == '/'|| date[3] == '-') && (date[6] == '/'|| date[6] == '-'))
+                managePopup()
+            else
+                managePopup2()
+        }else{
+            managePopup2()
+        }
+    }
 }
 
