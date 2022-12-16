@@ -36,7 +36,7 @@ class Gastos_activity : AppCompatActivity() {
         binding.buttonHome.setOnClickListener{
             val intent=Intent(this,MainActivity::class.java)
             startActivity(intent)
-            finish()
+
         }
         MONTOINGRESOS = intent.getStringExtra(MainActivity.MONTOCOMPRA).toString()
         val fecha = intent.getStringExtra(MainActivity.FECHA)
@@ -104,7 +104,7 @@ class Gastos_activity : AppCompatActivity() {
             // on below line we are displaying a toast message.
             val intent = Intent(this, Ingreso_activity::class.java)
             startActivity(intent)
-            finish()
+
         }
 
         // on below line we are adding on
@@ -113,7 +113,7 @@ class Gastos_activity : AppCompatActivity() {
             // on below line we are displaying a toast message.
             val intent = Intent(this, Compra_activity::class.java)
             startActivity(intent)
-            finish()
+
         }
 
     }

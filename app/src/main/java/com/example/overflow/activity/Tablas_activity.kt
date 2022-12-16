@@ -35,7 +35,7 @@ class Tablas_activity : AppCompatActivity() {
         binding.buttonHome.setOnClickListener{
             val intent=Intent(this,MainActivity::class.java)
             startActivity(intent)
-            finish()
+
         }
 
         // flotting button
@@ -100,7 +100,7 @@ class Tablas_activity : AppCompatActivity() {
             // on below line we are displaying a toast message.
             val intent = Intent(this, Ingreso_activity::class.java)
             startActivity(intent)
-            finish()
+
         }
 
         // on below line we are adding on
@@ -109,7 +109,7 @@ class Tablas_activity : AppCompatActivity() {
             // on below line we are displaying a toast message.
             val intent = Intent(this, Compra_activity::class.java)
             startActivity(intent)
-            finish()
+
         }
 
         // progress bar
